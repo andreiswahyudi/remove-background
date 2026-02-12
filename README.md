@@ -27,7 +27,6 @@ cd remove-background
 
 2. Instal dependensi:
 ```bash
-# Gunakan pip untuk menginstal pustaka yang diperlukan:
 pip install -r requirements.txt
 
 ```
