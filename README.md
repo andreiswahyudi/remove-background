@@ -63,17 +63,6 @@ Klik tombol **PROCESS**. Sistem akan menampilkan progress bar untuk setiap foto 
 
 Setelah selesai, klik tombol **Unduh Semua Hasil (ZIP)** untuk menyimpan foto yang telah bersih dari latar belakang.
 
-## Konfigurasi
-
-Batas maksimal file dapat diubah secara manual pada file `webapp.py`:
-
-```python
-# Ubah angka 100 sesuai kebutuhan sistem Anda
-if file_count > 100:
-    st.error("Batas maksimal terlampaui")
-
-```
-
 ## Disclaimer
 
 Alat ini dibuat untuk **tujuan produktivitas**. Harap perhatikan penggunaan memori (RAM) perangkat Anda saat memproses file dalam jumlah banyak atau resolusi tinggi secara bersamaan.
