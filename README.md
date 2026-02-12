@@ -1,35 +1,55 @@
-Python Background Remover
-Alat otomatisasi berbasis Python yang kuat untuk menghapus latar belakang foto secara massal melalui antarmuka browser lokal yang sederhana dan efisien.
-Fitur
-	• 🖼️ Batch Processing: Unggah dan proses hingga 100 foto sekaligus dalam satu sesi.
-	• 🔒 Privasi Lokal: Semua proses dilakukan di mesin Anda. Tidak ada data atau foto yang dikirim ke server eksternal.
-	• 🚀 Cepat & Otomatis: Menghapus latar belakang secara otomatis dan mengonversi hasil ke format PNG transparan.
-	• 📦 Ekspor ZIP: Mengemas semua hasil pemrosesan ke dalam satu file ZIP untuk pengunduhan yang praktis.
-	• 🌐 Browser Based: Menggunakan Streamlit untuk antarmuka yang ramah pengguna dan mudah diakses via browser.
+remove-background
+Alat otomatisasi berbasis Python dan Streamlit yang dirancang untuk menghapus latar belakang hingga 100 foto secara sekaligus dengan cepat, mudah, dan aman.
+
+Fitur Utama
+📦 Pemrosesan Batch: Mampu menangani hingga 100 foto dalam satu kali proses unggah.
+
+🔒 Privasi Terjamin: Proses penghapusan latar belakang dilakukan sepenuhnya secara lokal di komputer Anda. Tidak ada data yang diunggah ke server eksternal.
+
+⚡ Efisien & Praktis: Cukup unggah foto melalui browser dan unduh hasilnya langsung dalam satu paket file ZIP.
+
+🛠️ Didukung AI: Menggunakan teknologi segmentasi gambar canggih untuk hasil potongan yang rapi.
+
 Prasyarat
-	• Python: Proyek ini menggunakan Python 3.10+.
-	• C++ Redistributable: Diperlukan untuk mendukung pustaka pemrosesan gambar pada sistem Windows.
+Sebelum menjalankan aplikasi, pastikan perangkat Anda telah terinstal:
+
+Python 3.10 atau versi lebih baru.
+
+Microsoft Visual C++ Redistributable (Khusus pengguna Windows, untuk mendukung modul pemrosesan gambar).
+
 Instalasi
-	1. Clone repositori:
+Clone Repositori:
+
 Bash
+git clone https://github.com/andreiswahyudi/remove-background.git
+cd remove-background
+Instal Dependensi: Gunakan pip untuk menginstal pustaka yang diperlukan:
 
-git clone https://github.com/andreiswahyudi/remove-background.git cd remove-background
-	2. Instal dependensi:
 Bash
+pip install -r requirements.txt
+Penggunaan
+Untuk menjalankan aplikasi ini di browser lokal Anda, ikuti langkah berikut:
 
-# Disarankan menggunakan virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+Jalankan perintah Streamlit:
 
-# Instal pustaka yang diperlukan
-pip install streamlit transparent-background pillow tqdm
-
-	# Instal Dependensi: Gunakan pip untuk menginstal pustaka yang diperlukan:
-	pip install -r requirements.txt
-	1. Verifikasi instalasi:
 Bash
+streamlit run removebg.py
+Buka URL yang muncul di terminal (biasanya http://localhost:8501).
 
-streamlit --version
+Unggah foto-foto yang ingin diproses (maksimal 100 file).
+
+Klik tombol proses dan tunggu hingga selesai.
+
+Unduh hasil akhirnya dalam format ZIP.
+
+Daftar Dependensi
+Aplikasi ini menggunakan beberapa pustaka utama:
+
+streamlit: Untuk antarmuka web.
+
+transparent-background: Mesin utama penghapus latar belakang.
+
+Pillow: Untuk manipulasi gambar.
+
 Disclaimer
-Alat ini dibuat untuk tujuan produktivitas. Harap perhatikan penggunaan memori (RAM) perangkat Anda saat memproses file dalam jumlah banyak atau resolusi tinggi secara bersamaan.
-<img width="740" height="768" alt="image" src="https://github.com/user-attachments/assets/4a53ed75-09a8-456e-9501-1c29e0843dbf" />
+Aplikasi ini ditujukan untuk mempermudah alur kerja produktivitas. Pastikan perangkat Anda memiliki memori (RAM) yang cukup saat memproses foto dalam jumlah besar sekaligus.
